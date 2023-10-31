@@ -4,7 +4,6 @@ const userSignup = mongose.Schema({
     name: {
         type: String,
         required: true,
-        unique: false
     },
     email: {
         type: String,

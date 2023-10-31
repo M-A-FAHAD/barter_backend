@@ -23,7 +23,9 @@ handleUserSignup = async (req, res) => {
         }
 
     } catch (error) {
+        console.log("An error from handleSignup: " + error)
         return res.status(400).json({ error: 'Inter Server error' });
+
     }
 }
 
