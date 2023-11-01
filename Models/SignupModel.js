@@ -14,6 +14,9 @@ const userSignup = mongose.Schema({
         type: String,
         required: true,
         unique: true
+    },
+    profileImage: {
+        type: String
     }
 }, {
     timestamps: true

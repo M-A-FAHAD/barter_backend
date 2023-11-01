@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt')
 
 //Signup handelr
 handleUserSignup = async (req, res) => {
-    const { name, email, password } = req.body;
+    const { name, email, password, profileImage } = req.body;
     try {
         if (!name || !email || !password) {
             return res.status(403).json({ empty: 'Empty field' })
@@ -15,6 +15,7 @@ handleUserSignup = async (req, res) => {
                 name: name,
                 email: email,
                 password: hashedPassword,
+                profileImage: profileImage
             });
             // You can return a success message or any other appropriate response here.
             return res.status(200).json({ Success: 'User signed up successfully' });
