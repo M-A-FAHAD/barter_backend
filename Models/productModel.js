@@ -9,12 +9,19 @@ const ProductModel = mongose.Schema({
         type: String,
         required: true
     },
+    category: {
+        type: String,
+        required: true
+    },
+    description: {
+        type: String
+    },
     location: {
-        division: {
+        divition: {
             type: String,
             required: true
         },
-        district: {
+        city: {
             type: String,
             required: true
         }
@@ -23,9 +30,16 @@ const ProductModel = mongose.Schema({
         type: Number,
         required: true,
     },
-    imagePath: {
+    image: {
         type: String,
         required: true,
+    },
+    owner: {
+        type: String,
+        required: true
+    },
+    contact: {
+        type: String
     },
     connectionReq: []
 
